@@ -3,10 +3,12 @@ using InventoryFull.Domain.Core.Inventory.Category;
 using InventoryFull.Domain.Core.Inventory.InputOutput;
 using InventoryFull.Domain.Core.Inventory.Product;
 using InventoryFull.Domain.Core.Inventory.Storage;
+using InventoryFull.Domain.Core.Inventory.Warehouse;
+using InvetoryFull.Infrastructure.Data.Persistence.Core.Base.Configuration;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
-namespace InvetoryFull.Infrastructure.Data.Persistence.Core.Base.Configuration
+namespace InvetoryFull.Infrastructure.Data.Persistence.Core.Base
 {
     internal class ContextDb : DbContext, IContextDb
     {
@@ -18,7 +20,7 @@ namespace InvetoryFull.Infrastructure.Data.Persistence.Core.Base.Configuration
 
         public DbSet<InputOutputEntity> InOuts { get; set; }
 
-        public DbSet<WareHouseEntity> Warehouses { get; set; }
+        public DbSet<WarehouseEntity> Warehouses { get; set; }
 
         public DbSet<StorageEntity> Storages { get; set; }
 

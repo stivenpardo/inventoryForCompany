@@ -46,22 +46,13 @@ namespace InvetoryFull.Infrastructure.Data.Persistence.Core.Base
                 return false;
             }
         }
+        public IEnumerable SearchMatching<T>(Expression<Func<T, bool>> predicate) where T : class =>
+            _unitOfWork.Set<T>().Where(predicate);
 
-        public IEnumerable GetAll<T>() where T : class
-        {
-            throw new NotImplementedException();
-        }
+        public IEnumerable GetAll<T>() where T : class => _unitOfWork.Set<T>().ToArray();
 
-
-        public IEnumerable SearchMatching<T>(Expression<Func<T, bool>> predicate) where T : class
-        {
-            throw new NotImplementedException();
-        }
-
-        public T SearchMatchingOneResult<T>(Expression<Func<T, bool>> predicate) where T : class
-        {
-            throw new NotImplementedException();
-        }
+        public T SearchMatchingOneResult<T>(Expression<Func<T, bool>> predicate) where T : class =>
+            _unitOfWork.Set<T>().First(predicate);
 
     }
 }
