@@ -1,0 +1,10 @@
+﻿using InventoryFull.Domain.Core.Inventory.Category;
+using InvetoryFull.Infrastructure.Data.Persistence.Core.Base;
+
+namespace InvetoryFull.Infrastructure.Data.Persistence.Core.Inventory
+{
+    public class CategoryRepository : RepositoryBase<CategoryEntity>, ICategoryRepository
+    {
+        public CategoryRepository(IContextDb context) : base(context) { }
+    }
+}
