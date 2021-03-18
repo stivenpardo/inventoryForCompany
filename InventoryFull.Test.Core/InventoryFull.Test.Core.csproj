@@ -31,7 +31,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="5.Infrastucture\5.1 Data\" />
+    <ProjectReference Include="..\InventoryFull.Aplication.Core\InventoryFull.Aplication.Core.csproj" />
+    <ProjectReference Include="..\InventoryFull.Domain.Core\InventoryFull.Domain.Core.csproj" />
+    <ProjectReference Include="..\InventoryFull.Infrastucture.Transversal\InventoryFull.Infrastucture.Transversal.csproj" />
+    <ProjectReference Include="..\InvetoryFull.Infrastructure.Datos.Persistence.Core\InvetoryFull.Infrastructure.Data.Persistence.Core.csproj" />
   </ItemGroup>
 
 </Project>
