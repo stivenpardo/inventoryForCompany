@@ -15,9 +15,16 @@ namespace InvetoryFull.Infrastructure.Data.Persistence.Core.Base
         public RepositoryBase(IUnitOfWork unitOfWork) => _unitOfWork = unitOfWork;
         public async Task<T> Insert<T>(T entity) where T : class
         {
-            var response = await _unitOfWork.Set<T>().AddAsync(entity);
-            _unitOfWork.Commit();
-            return response.Entity;
+            try
+            {
+                var response = await _unitOfWork.Set<T>().AddAsync(entity);
+                _unitOfWork.Commit();
+                return response.Entity;
+            }
+            catch (Exception)
+            {
+                throw new Exception("Registration was not made");
+            }
         }
         public bool Update<T>(T entity) where T : class
         {

@@ -25,7 +25,7 @@ namespace InvetoryFull.Infrastructure.Data.Persistence.Core.Base.Configuration
         public static void ConfigureContext(this IServiceCollection services, DbSettings settings)
         {
             services.Configure<DbSettings>(o => o.CopyFrom(settings));
-            services.TryAddScoped<IContextDb, IContextDb>();
+            services.TryAddScoped<IContextDb, ContextDb>();
         }
     }
 }
