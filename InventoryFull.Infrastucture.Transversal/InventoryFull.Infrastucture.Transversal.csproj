@@ -15,10 +15,5 @@
   <ItemGroup>
     <ProjectReference Include="..\InventoryFull.Aplication.Dto\InventoryFull.Aplication.Dto.csproj" />
   </ItemGroup>
-  
-  <ItemGroup>
-    <Folder Include="Exceptions\" />
-    <Folder Include="GenericMethods\Configuration\" />
-  </ItemGroup>
 
 </Project>
