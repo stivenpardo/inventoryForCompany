@@ -11,10 +11,10 @@ namespace InvetoryFull.Infrastructure.Data.Persistence.Core.Base
 {
     public interface IContextDb : IUnitOfWork, IDisposable
     {
-        public DbSet<ProductEntity> Products { get; }
-        public DbSet<CategoryEntity> Categories { get; }
-        public DbSet<InputOutputEntity> InOuts { get; }
-        public DbSet<WarehouseEntity> Warehouses { get; }
-        public DbSet<StorageEntity> Storages { get; }
+        public DbSet<ProductEntity> Product { get; }
+        public DbSet<CategoryEntity> Category { get; }
+        public DbSet<InputOutputEntity> InOut { get; }
+        public DbSet<WarehouseEntity> Warehouse { get; }
+        public DbSet<StorageEntity> Storage { get; }
     }
 }

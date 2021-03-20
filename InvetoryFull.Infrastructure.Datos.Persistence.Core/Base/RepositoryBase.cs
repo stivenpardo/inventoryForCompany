@@ -44,7 +44,7 @@ namespace InvetoryFull.Infrastructure.Data.Persistence.Core.Base
             try
             {
                 var entityToDelete = _unitOfWork.Set<T>().First(x => x == entity);
-                _unitOfWork.Set<T>().Remove(entityToDelete);
+                 _unitOfWork.Set<T>().Remove(entityToDelete);
                 _unitOfWork.Commit();
                 return true;
             }

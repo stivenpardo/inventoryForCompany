@@ -14,21 +14,21 @@ namespace InvetoryFull.Infrastructure.Data.Persistence.Core.Base
     {
         private readonly DbSettings _settings;
         #region Tables DB
-        public DbSet<ProductEntity> Products { get; set; }
+        public DbSet<ProductEntity> Product { get; set; }
 
-        public DbSet<CategoryEntity> Categories { get; set; }
+        public DbSet<CategoryEntity> Category { get; set; }
 
-        public DbSet<InputOutputEntity> InOuts { get; set; }
+        public DbSet<InputOutputEntity> InOut { get; set; }
 
-        public DbSet<WarehouseEntity> Warehouses { get; set; }
+        public DbSet<WarehouseEntity> Warehouse { get; set; }
 
-        public DbSet<StorageEntity> Storages { get; set; }
+        public DbSet<StorageEntity> Storage { get; set; }
 
         #endregion
 
         public ContextDb() => _settings = new DbSettings
         {
-            ConnectionString = "Server = DESKTOP-A52QQCF\\SQLEXPRESS; Database = InventoryDB; Trusted_Connection = True;"
+            ConnectionString = "Server = DESKTOP-A52QQCF\\SQLEXPRESS; Database = InventoryCompanyDB; Trusted_Connection = True;"
         };
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) =>
             optionsBuilder.UseSqlServer(_settings.ConnectionString);
