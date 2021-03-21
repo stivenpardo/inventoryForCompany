@@ -5,6 +5,6 @@ namespace InventoryFull.Aplication.Core.Inventory
 {
     public interface IInvetoryFacade
     {
-        Task<ProductResponseDto> ProductInventory(ProductRequestDto request);
+        Task<ProductResponseDto> ProductInventory(ProductRequestDto request, string nameMethod);
     }
 }
